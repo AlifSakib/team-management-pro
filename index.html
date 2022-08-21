@@ -58,7 +58,7 @@
             class="player mx-6 text-center text-white space-y-4 bg-slate-900 mt-10 pb-6"
           >
             <img src="./images/image-1.jpg" alt="" />
-            <h1 id="playername-1" class="text-2xl">Leonel Messi1</h1>
+            <h1 id="playername-1" class="text-2xl">Leonel Messi</h1>
             <p>36 Goals . 120 Assists</p>
             <button class="button text-xl bg-blue-700 py-1 w-9/12">
               SELECT
@@ -69,7 +69,7 @@
             class="player mx-6 text-center text-white space-y-4 bg-slate-900 mt-10 pb-6"
           >
             <img src="./images/image-4.jpg" alt="" />
-            <h1 class="text-2xl">Leonel Messi2</h1>
+            <h1 class="text-2xl">Kylian Mbappé</h1>
             <p>36 Goals . 120 Assists</p>
             <button class="button text-xl bg-blue-700 py-1 w-9/12">
               SELECT
@@ -80,7 +80,7 @@
             class="player mx-6 text-center text-white space-y-4 bg-slate-900 mt-10 pb-6"
           >
             <img src="./images/image-7.jpg" alt="" />
-            <h1 class="text-2xl">Leonel Messi3</h1>
+            <h1 class="text-2xl">Vítor Machado</h1>
             <p>36 Goals . 120 Assists</p>
             <button class="button text-xl bg-blue-700 py-1 w-9/12">
               SELECT
@@ -91,7 +91,7 @@
             class="player mx-6 text-center text-white space-y-4 bg-slate-900 mt-10 pb-6"
           >
             <img src="./images/image-2.jpg" alt="" />
-            <h1 class="text-2xl">Leonel Messi4</h1>
+            <h1 class="text-2xl">Ronaldo</h1>
             <p>36 Goals . 120 Assists</p>
             <button class="button text-xl bg-blue-700 py-1 w-9/12">
               SELECT
@@ -102,7 +102,7 @@
             class="player mx-6 text-center text-white space-y-4 bg-slate-900 mt-10 pb-6"
           >
             <img src="./images/image-3.jpg" alt="" />
-            <h1 class="text-2xl">Leonel Messi5</h1>
+            <h1 class="text-2xl">Ronaldinho</h1>
             <p>36 Goals . 120 Assists</p>
             <button class="button text-xl bg-blue-700 py-1 w-9/12">
               SELECT
@@ -113,7 +113,7 @@
             class="player mx-6 text-center text-white space-y-4 bg-slate-900 mt-10 pb-6"
           >
             <img src="./images/image-2.jpg" alt="" />
-            <h1 class="text-2xl">Leonel Messi6</h1>
+            <h1 class="text-2xl">Renato Sanches</h1>
             <p>36 Goals . 120 Assists</p>
             <button class="button text-xl bg-blue-700 py-1 w-9/12">
               SELECT
@@ -134,16 +134,21 @@
             <h1 class="text-2xl py-6">Budget</h1>
             <div class="flex justify-between mx-8 items-center">
               <h1 class="text-xl">Per Player</h1>
-              <input class="p-2 w-1/3 text-black rounded-md" type="text" />
+              <input
+                id="per-player-expenses"
+                class="p-2 w-1/3 text-black rounded-md"
+                type="text"
+              />
             </div>
             <button
+              id="per-player-budget"
               class="text-xl bg-blue-700 p-2 w-9/12 rounded-md hover:bg-orange-400"
             >
               Calculate
             </button>
             <div class="flex justify-between mx-8 items-center text-xl">
               <h1>Player Expenses</h1>
-              <h1>$<span>5000</span></h1>
+              <h1>$<span id="total-player-expenses">5000</span></h1>
             </div>
             <div class="flex justify-between mx-8 items-center">
               <h1 class="text-xl">Manager</h1>
