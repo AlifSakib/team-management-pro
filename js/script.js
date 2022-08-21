@@ -23,7 +23,17 @@ document
   .addEventListener("click", function () {
     const playersList = document.getElementById("player-lists");
     const totalPlayer = playersList.childNodes.length;
-    const perPlayerExpense = getvalue("per-player-expenses");
+    const perPlayerExpense = getValue("per-player-expenses");
     const playerExpenses = totalPlayer * perPlayerExpense;
     setValue("total-player-expenses", playerExpenses);
+  });
+
+document
+  .getElementById("total-expenses-btn")
+  .addEventListener("click", function () {
+    const managerExpense = getValue("managerCost");
+    const coachExpense = getValue("cocahCost");
+    const totalPlaterExpenses = getInnertext("total-player-expenses");
+    const totalExpenses = managerExpense + coachExpense + totalPlaterExpenses;
+    setValue("total-expense", totalExpenses);
   });
