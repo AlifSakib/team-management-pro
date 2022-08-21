@@ -14,7 +14,8 @@ for (let button of buttons) {
     playerList.appendChild(newLi);
     count++;
     button.disabled = true;
-    button.style.backgroundColor = "red";
+    button.style.backgroundColor = "white";
+    button.style.color = "black";
   });
 }
 
