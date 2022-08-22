@@ -26,7 +26,7 @@ document
     const playersList = document.getElementById("player-lists");
     const totalPlayer = playersList.childNodes.length;
     const perPlayerExpense = getValue("per-player-expenses");
-    if (isNaN(perPlayerExpense) || perPlayerExpense < 0) {
+    if (isNaN(perPlayerExpense) || perPlayerExpense < 0 || totalPlayer === 0) {
       alert("please Enter a Valid Number");
       clearInput("per-player-expenses");
       return;
@@ -41,14 +41,13 @@ document
   .addEventListener("click", function () {
     const managerExpense = getValue("managerCost");
     const coachExpense = getValue("cocahCost");
-    const totalPlaterExpenses = getInnertext("total-player-expenses");
+    const totalPlayerExpenses = getInnertext("total-player-expenses");
     if (isNaN(managerExpense) || isNaN(coachExpense)) {
       alert("Please Enter a Number");
-
       clearInput("managerCost");
       clearInput("cocahCost");
       return;
     }
-    const totalExpenses = managerExpense + coachExpense + totalPlaterExpenses;
+    const totalExpenses = managerExpense + coachExpense + totalPlayerExpenses;
     setValue("total-expense", totalExpenses);
   });
