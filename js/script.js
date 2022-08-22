@@ -9,13 +9,15 @@ for (let button of buttons) {
       return;
     }
     const newLi = document.createElement("li");
-    newLi.innerHTML = `${count}.${playerName}`;
+    newLi.style.display = "flex";
+    newLi.innerHTML = `<div class="text-2xl pr-4 py-4 font-bold text-slate-400" >${count}.</div> <div class="text-2xl py-4">${playerName}</div>`;
     const playerList = document.getElementById("player-lists");
     playerList.appendChild(newLi);
     count++;
     button.disabled = true;
-    button.style.backgroundColor = "white";
-    button.style.color = "black";
+    button.classList.add("cursor-not-allowed");
+    // button.style.backgroundColor = "white";
+    // button.style.color = "black";
   });
 }
 
@@ -25,6 +27,12 @@ document
     const playersList = document.getElementById("player-lists");
     const totalPlayer = playersList.childNodes.length;
     const perPlayerExpense = getValue("per-player-expenses");
+    if (isNaN(perPlayerExpense) || perPlayerExpense < 0) {
+      alert("please Enter a Valid Number");
+      clearInput("per-player-expenses");
+      return;
+    }
+
     const playerExpenses = totalPlayer * perPlayerExpense;
     setValue("total-player-expenses", playerExpenses);
   });

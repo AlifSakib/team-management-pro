@@ -9,3 +9,7 @@ function setValue(id, value) {
 function getInnertext(id) {
   return parseInt(document.getElementById(id).innerText);
 }
+
+function clearInput(id) {
+  document.getElementById(id).value = "";
+}
