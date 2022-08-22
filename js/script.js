@@ -16,8 +16,6 @@ for (let button of buttons) {
     count++;
     button.disabled = true;
     button.classList.add("cursor-not-allowed");
-    // button.style.backgroundColor = "white";
-    // button.style.color = "black";
   });
 }
 
@@ -43,12 +41,12 @@ document
     const managerExpense = getValue("managerCost");
     const coachExpense = getValue("cocahCost");
     const totalPlaterExpenses = getInnertext("total-player-expenses");
-    if (validInputCheck("managerCost", "cocahCost") === true) {
+    if (isNaN(managerExpense) || isNaN(coachExpense)) {
+      alert("Please Enter a Number");
       clearInput("managerCost");
       clearInput("cocahCost");
       return;
     }
-
     const totalExpenses = managerExpense + coachExpense + totalPlaterExpenses;
     setValue("total-expense", totalExpenses);
   });
