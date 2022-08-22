@@ -5,7 +5,7 @@ for (let button of buttons) {
     const parent = button.parentElement;
     const playerName = parent.querySelector("h1").innerText;
     if (count > 5) {
-      alert("You Can Only Select 5 Member");
+      alert("You Can Select Only 5 Member");
       return;
     }
     const newLi = document.createElement("li");
@@ -16,6 +16,7 @@ for (let button of buttons) {
     count++;
     button.disabled = true;
     button.classList.add("cursor-not-allowed");
+    button.style.backgroundColor = "silver";
   });
 }
 
@@ -43,6 +44,7 @@ document
     const totalPlaterExpenses = getInnertext("total-player-expenses");
     if (isNaN(managerExpense) || isNaN(coachExpense)) {
       alert("Please Enter a Number");
+
       clearInput("managerCost");
       clearInput("cocahCost");
       return;
