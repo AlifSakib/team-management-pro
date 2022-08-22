@@ -42,6 +42,11 @@ document
   .addEventListener("click", function () {
     const managerExpense = getValue("managerCost");
     const coachExpense = getValue("cocahCost");
+    if (validInputCheck("managerCost", "cocahCost") === true) {
+      clearInput("managerCost");
+      clearInput("cocahCost");
+      return;
+    }
     const totalPlaterExpenses = getInnertext("total-player-expenses");
     const totalExpenses = managerExpense + coachExpense + totalPlaterExpenses;
     setValue("total-expense", totalExpenses);
